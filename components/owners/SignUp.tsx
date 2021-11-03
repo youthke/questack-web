@@ -67,6 +67,20 @@ const SignUpForm: React.FC<Props> = (props) => {
       />
         </FormGroup>
         <FormGroup>
+          <Label>Password</Label>
+          <Controller
+          rules={{ required: "パスワードを入力してください" }}
+          control={control}
+          name="password"
+          render={({field}) => <Input type="password" {...field} />}
+        />
+        <ErrorMessage
+        errors={errors}
+        name="password"
+        render={({message}) => <Message>{message}</Message>}
+      />
+        </FormGroup>
+        <FormGroup>
           <Button type="submit">Submit</Button>
         </FormGroup>
       </Form>
