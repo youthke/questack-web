@@ -2,13 +2,17 @@ import { Store, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import counterSlice, { initialState as counterState } from './counter/slice';
+import ownerSlice, {initialState as ownerState} from './owner/slice';
+import stackSlice, {initialState as stackState} from './stack/slice';
 
 const rootReducer = combineReducers({
   counter: counterSlice.reducer,
+  owner: ownerSlice.reducer,
+  stack: stackSlice.reducer,
 });
 
 const preloadedState = () => {
-  return { counter: counterState };
+  return { counter: counterState, owner: ownerState, stack: stackState};
 };
 
 export type StoreState = ReturnType<typeof preloadedState>;
