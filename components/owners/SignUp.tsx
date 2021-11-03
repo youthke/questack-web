@@ -31,7 +31,6 @@ const SignUpForm: React.FC<Props> = (props) => {
   const {handleSubmit, control, formState: {errors} } = useForm();
   const dispatch = useDispatch()
   const onSubmit = async (values: FormData) => {
-    console.log(values)
     const f = signUp(values.name, values.mail, values.password)
     f(dispatch)
   }
