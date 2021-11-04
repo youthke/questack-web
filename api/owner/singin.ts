@@ -26,6 +26,7 @@ export const signIn = (mail: string, password: string) => {
             time.setTime(t + 1000 * 60 * 60);
             Cookies.remove("questack_token");
             Cookies.set("questack_token", resp.data.token, { expires: time });
+            dispatch(ownerSlice.actions.setToken(resp.data.token))
             dispatch(ownerSlice.actions.signInSuccess())
         }catch(e) {
             dispatch(ownerSlice.actions.signInError())

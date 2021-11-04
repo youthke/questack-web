@@ -4,6 +4,7 @@ import { Stack } from '../../models/Stack';
 export type OwnerState = {
   loading: boolean;
   signInSuccess: boolean;
+  token: string;
   error: boolean;
   errorMessage: string;
 };
@@ -11,6 +12,7 @@ export type OwnerState = {
 export const initialState: OwnerState = {
   loading: false,
   signInSuccess: false,
+  token: '',
   error: false,
   errorMessage: '',
 };
@@ -33,6 +35,10 @@ const ownerSlice = createSlice({
       loading: false,
       error: true,
       errorMessage: "作成に失敗しました",
+    }),
+    setToken: (state, action: PayloadAction<string>) => ({
+      ...state,
+      token: action.payload
     }),
     signIn: (state) => ({
       ...state,
