@@ -7,8 +7,8 @@ import styled, { StyledFunction } from 'styled-components';
 import { postStack } from "../../api/stack/create";
 import { useOwnerState } from "../../ducks/owner/selectors";
 import Cookies from 'js-cookie';
-import ownerSlice from "../../ducks/owner/slice";
 import { useRouter } from "next/router";
+import ownerSlice from "../../ducks/owner/slice";
 
 
 interface Props  {
