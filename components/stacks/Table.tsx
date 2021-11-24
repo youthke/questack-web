@@ -21,7 +21,7 @@ const StackTable: React.FC<Props> = (props) => {
           return(
             <tr>
               <td>{stack.name}</td>
-              <td>{`${process.env.domainName}/questack/stacks/${stack.id}`}</td>
+              <td>{`${process.env.domainName}/questack/stack/${stack.id}`}</td>
             </tr>
 
           )
