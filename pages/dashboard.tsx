@@ -6,6 +6,7 @@ import StackTable from "../components/stacks/Table"
 import { auth } from "./util"
 import { getStacks } from "../api/stack/getAll"
 import { Stack } from "../models/Stack"
+import NewStackModal from "../components/stacks/NewModal"
 
 type Props = {
   stacks: Stack[]
@@ -14,7 +15,7 @@ type Props = {
 const DashBoard: NextPage<Props> = (props: Props) =>{
   return(
     <>
-      <NewStackForm/>
+      <NewStackModal/>
       <StackTable stacks={props.stacks}/>
     </>
   )
