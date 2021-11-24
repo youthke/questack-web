@@ -12,10 +12,11 @@ const NewStackModal: React.FC<{}> = () => {
     </Button>
     <Modal isOpen={isModalAppearance} toggle={modalToggle}>
       <ModalHeader>
+        Create New Stack
+      </ModalHeader>
         <ModalBody>
           <NewStackForm/>
         </ModalBody>
-      </ModalHeader>
     </Modal>
     </>
   );
