@@ -39,7 +39,11 @@ const stackSlice = createSlice({
       loading: false,
       error: true,
       errorMessage: "作成に失敗しました",
-    })
+    }),
+    setStack: (state, action: PayloadAction<Stack>) => ({
+      ...state,
+      stack: action.payload,
+    }),
   },
 });
 
