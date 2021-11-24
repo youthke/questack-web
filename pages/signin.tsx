@@ -3,6 +3,7 @@ import React from "react";
 import Router from "next/router";
 import { useOwnerState } from "../ducks/owner/selectors";
 import SignIn from "../components/owners/SignIn";
+import { Card, Col, Row } from "reactstrap";
 
 type Props = {}
 
@@ -17,9 +18,14 @@ const SignInPage: NextPage<Props> = () => {
         func()
     },[signInSuccess]);
     return(
-        <div>
+        <Row className="justify-content-center">
+          <Col md="auto" className="ml-10">
+          <Card body>
+            <h2>Sign in</h2>
             <SignIn/>
-        </div>
+        　</Card>
+          </Col>
+        </Row>
     );
 };
 
